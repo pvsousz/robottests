@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231019 08:54:22.459" rpa="false" schemaversion="4">
+<suite id="s1" name="Amazon Testes Gherkin Bdd" source="c:\Users\vinicius\Desktop\curso-frame\virtual\amazon_testes_gherkin_bdd.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="14">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<arg>url=https://www.google.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231019 08:54:22.684" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<msg timestamp="20231019 08:54:23.282" level="WARN">The chromedriver version (117.0.5938.88) detected in PATH at C:\Users\vinicius\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.72); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231019 08:54:22.683" endtime="20231019 08:54:27.574"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231019 08:54:27.576" endtime="20231019 08:54:27.703"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:22.683" endtime="20231019 08:54:27.704"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
+<kw name="Acessar a home page do site amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231019 08:54:27.706" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20231019 08:54:27.705" endtime="20231019 08:54:30.132"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231019 08:54:30.133" endtime="20231019 08:54:30.241"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:27.705" endtime="20231019 08:54:30.241"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231019 08:54:30.253" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="PASS" starttime="20231019 08:54:30.242" endtime="20231019 08:54:30.253"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:30.241" endtime="20231019 08:54:30.253"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:27.704" endtime="20231019 08:54:30.254"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231019 08:54:30.255" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20231019 08:54:30.255" endtime="20231019 08:54:32.226"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:30.254" endtime="20231019 08:54:32.226"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:30.254" endtime="20231019 08:54:32.226"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources">
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231019 08:54:32.239" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<status status="PASS" starttime="20231019 08:54:32.229" endtime="20231019 08:54:32.239"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.228" endtime="20231019 08:54:32.239"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.227" endtime="20231019 08:54:32.239"/>
+</kw>
+<kw name="E o texto &quot;Eletrônicos e Tecnologia&quot; deve ser exibido na página" library="amazon_resources">
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${frase}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${frase}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231019 08:54:32.240" endtime="20231019 08:54:32.310"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231019 08:54:32.310" endtime="20231019 08:54:32.372"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.240" endtime="20231019 08:54:32.373"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.240" endtime="20231019 08:54:32.373"/>
+</kw>
+<kw name="E a categoria &quot;Computadores e Informática&quot; deve ser exibida na página" library="amazon_resources">
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//img[contains(@alt,'${NOME_CATEGORIA}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231019 08:54:32.431" level="INFO">Element '//img[contains(@alt,'Computadores e Informática')]' is displayed.</msg>
+<status status="PASS" starttime="20231019 08:54:32.374" endtime="20231019 08:54:32.432"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.373" endtime="20231019 08:54:32.432"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.373" endtime="20231019 08:54:32.432"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231019 08:54:32.739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231019 08:54:32.433" endtime="20231019 08:54:32.740"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231019 08:54:32.740" endtime="20231019 08:54:34.929"/>
+</kw>
+<status status="PASS" starttime="20231019 08:54:32.432" endtime="20231019 08:54:34.929"/>
+</kw>
+<doc>Esse teste verifica o menu "eletronicos" do site da amazon.com.br
+E verifica a categoria "Computadores e Informática"</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" starttime="20231019 08:54:22.669" endtime="20231019 08:54:34.929"/>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="PASS" starttime="20231019 08:54:22.464" endtime="20231019 08:54:34.931"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231019 08:54:23.282" level="WARN">The chromedriver version (117.0.5938.88) detected in PATH at C:\Users\vinicius\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.72); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
